@@ -1,0 +1,29 @@
+{
+    "name": "serkin/ymlparser",
+    "type": "library",
+    "description": "Parser for yml(yandex.market.ru) files",
+    "keywords": ["yml", "yandex"],
+    "homepage": "https://github.com/serkin/ymlparser",
+    "authors": [
+        {
+            "name": "Serkin Alexander",
+            "email": "serkin.alexander@gmail.com",
+            "homepage": "http://linkedin.com/in/SerkinAlexander",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "ext-xmlrpc": "*",
+        "ext-curl": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.6.*"
+   },
+
+    "autoload": {
+        "psr-4": {
+            "YMLParser\\": "src/"
+        }
+    }
+}

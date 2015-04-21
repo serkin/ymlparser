@@ -1,0 +1,21 @@
+﻿<phpunit 
+    bootstrap="vendor/autoload.php"
+    convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+    colors="true"        
+    verbose="true">
+
+    <testsuites>
+        <testsuite name="connection">
+            <file>tests/Config.php</file>
+            <file>tests/Connection.php</file>
+        </testsuite>
+        <testsuite name="collection">
+            <directory suffix='.php'>tests/Collection</directory>
+        </testsuite>
+        <testsuite name="record">
+            <directory suffix='.php'>tests/Record</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
