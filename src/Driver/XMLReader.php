@@ -5,6 +5,8 @@ namespace YMLParser\Driver;
 class XMLReader implements DriverInterface
 {
 
+    private $xml;
+
     public function getCategories() {
         return [];
     }
@@ -17,11 +19,17 @@ class XMLReader implements DriverInterface
         return [];
     }
 
-    public function create($xml) {
-        
+    public function open($filename) {
+
+        $this->xml = new \XMLReader();
+        return $this->xml->open($filename);
     }
 
     public function countOffers(\Closure $filter) {
         return 0;
+    }
+
+    public function isValid() {
+        return $this->xml->isValid();
     }
 }
