@@ -15,16 +15,9 @@ class YMLParser
     /**
      * Curent curency
      * 
-     * @var type 
+     * @var string 
      */
-    private $currency;
-
-    /**
-     * Last error code
-     * 
-     * @var int 
-     */
-    private $errorCode = 0;
+    private $defaultCurrency;
 
 
     const ERROR_FILE_DOESNT_EXIST   = 1;
@@ -42,48 +35,7 @@ class YMLParser
      */
     public function setDefaultCurrency($currency)
     {
-        $this->currency = $currency;
-    }
-
-    /**
-     * Sets error
-     * 
-     * @param int $errorCode
-     * $return void
-     */
-    private function setError($errorCode)
-    {
-        $this->errorCode = $errorCode;
-    }
-
-    /**
-     * Gets error code
-     * 
-     * @return int
-     */
-    public function getErrorCode()
-    {
-        return $this->errorCode;
-    }
-
-    /**
-     * Checks for last occured error
-     * 
-     * @return boolean
-     */
-    public function hasError()
-    {
-        return ($this->errorCode === 0) ? false : true;
-    }
-    
-    /**
-     * Unsest error
-     * 
-     * @return void
-     */
-    private function unsetError()
-    {
-        $this->errorCode = 0;
+        $this->defaultCurrency = $currency;
     }
 
     /**
@@ -91,21 +43,23 @@ class YMLParser
      * 
      * Sets error for YMLParser if cannot open file or xml is invalid
      * 
-     * @param string $file Path to file
+     * @param string $filename Path to file
+     * @throws \Exception Throws exception if file doesn't exist or its size = 0
      * @return boolean
      */
-    public function open($file) {
+    public function open($filename) {
 
-        $returnValue = true;
-
-        if(!file_exists($file)):
-            $returnValue = false;
-            $this->setError(self::ERROR_FILE_DOESNT_EXIST);            
+        if(!file_exists($filename) or filesize($filename) === 0):
+            throw new \Exception("File: {$filename} does not exist or empty.");       
         endif;
 
-        // TODO Check for valid xml
+        return $this->driver->open($file);;
 
-        return $returnValue;
-
+    }
+    
+    
+    public function __call($name, $arguments)
+    {
+        return $this->driver->$name($arguments);
     }
 }
