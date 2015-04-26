@@ -4,14 +4,15 @@ namespace YMLParser\Driver;
 
 interface DriverInterface
 {
-
+    
+    
     /**
      * Creates XML Parser according with driver
      * 
      * @param string $xml Valid xml string
      * @return void
      */
-    public function create($xml);
+    public function open($xml);
 
     /**
      * Gets array of file categories
@@ -45,4 +46,11 @@ interface DriverInterface
      * @return int
      */
     public function countOffers(\Closure $filter);
+    
+    /**
+     * Checks if file is valid xml
+     * 
+     * @return boolean
+     */
+    public function isValid();
 }
