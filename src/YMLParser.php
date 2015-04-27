@@ -20,9 +20,6 @@ class YMLParser
     private $defaultCurrency;
 
 
-    const ERROR_FILE_DOESNT_EXIST   = 1;
-    const ERROR_INVALID_XML         = 2;
-
     public function __construct(Driver\DriverInterface $driver) {
         $this->driver = $driver;
     }
@@ -53,11 +50,12 @@ class YMLParser
             throw new \Exception("File: {$filename} does not exist or empty.");       
         endif;
 
-        return $this->driver->open($file);;
+        return $this->driver->open($filename);;
 
     }
     
-    
+
+
     public function __call($name, $arguments)
     {
         return $this->driver->$name($arguments);
