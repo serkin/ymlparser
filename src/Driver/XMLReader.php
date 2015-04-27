@@ -28,8 +28,4 @@ class XMLReader implements DriverInterface
     public function countOffers(\Closure $filter) {
         return 0;
     }
-
-    public function isValid() {
-        return $this->xml->isValid();
-    }
 }

@@ -46,11 +46,5 @@ interface DriverInterface
      * @return int
      */
     public function countOffers(\Closure $filter);
-    
-    /**
-     * Checks if file is valid xml
-     * 
-     * @return boolean
-     */
-    public function isValid();
+
 }
