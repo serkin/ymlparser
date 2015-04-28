@@ -46,7 +46,7 @@ class YMLParser
      */
     public function open($filename) {
 
-        if(!file_exists($filename) or filesize($filename) === 0):
+        if(file_exists($filename) === false or filesize($filename) === 0):
             throw new \Exception("File: {$filename} does not exist or empty.");       
         endif;
 
@@ -56,8 +56,9 @@ class YMLParser
     
 
 
-    public function __call($name, $arguments)
+    public function __call($method, $args = null)
     {
-        return $this->driver->$name($arguments);
+        return call_user_func_array([$this->driver, $method], $args);
     }
+
 }
