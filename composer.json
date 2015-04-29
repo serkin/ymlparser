@@ -4,6 +4,7 @@
     "description": "Parser for yml(yandex.market.ru) files",
     "keywords": ["yml", "yandex"],
     "homepage": "https://github.com/serkin/ymlparser",
+    "license": "MIT",
     "authors": [
         {
             "name": "Serkin Alexander",
@@ -14,8 +15,7 @@
     ],
     "require": {
         "php": ">=5.5",
-        "ext-xmlrpc": "*",
-        "ext-curl": "*"
+        "ext-xmlrpc": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "4.6.*"
