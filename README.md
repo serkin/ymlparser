@@ -1,7 +1,7 @@
 # YML Parser
 Parser for yml(yandex.market.ru) files. YMLParser out of box uses two types of parsing:
-* XMLReader - for larger files
-* SimpleXML - for small files
+* XMLReader - for medium and large xml files
+* SimpleXML - for small xml files
 
 ## Installation
 ---
@@ -58,6 +58,7 @@ endforeach;
 
 ## Licence
 * MIT
+
 ## TODO
 * countOffers()
 * getCurrencies()
