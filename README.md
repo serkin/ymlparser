@@ -38,9 +38,11 @@ $filename = '/path/to/file/file.xml';
 
 $parser = new \YMLParser\YMLParser(new \YMLParser\Driver\SimpleXML);
 $parser->open($filename);
+
 // We want offers only with not empty url subelements
 $filter = function($element) { return !empty($element['url']); }; 
 $offers = iterator_to_array($parser->getOffers($filter));
+
 // Let's get all params from first offer if they are exist
 foreach($offers[0]['params'] as $param):
 	echo $param['name'] . ' - ' . $param['value'];
