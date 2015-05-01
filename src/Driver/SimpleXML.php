@@ -93,7 +93,13 @@ class SimpleXML implements DriverInterface
      */
     public function countOffers(\Closure $filter = null)
     {
-        return 0;
+        $returnValue = 0;
+
+        while ($this->getOffers($filter)):
+            $returnValue++;
+        endwhile;
+
+        return $returnValue;
     }
 
     /**

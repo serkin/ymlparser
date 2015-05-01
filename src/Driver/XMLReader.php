@@ -161,9 +161,15 @@ class XMLReader implements DriverInterface
      *
      * @return int
      */
-    public function countOffers(\Closure $filter)
+    public function countOffers(\Closure $filter = null)
     {
-        return 0;
+        $returnValue = 0;
+
+        while ($this->getOffers($filter)):
+            $returnValue++;
+        endwhile;
+
+        return $returnValue;
     }
 
     /**
