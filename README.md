@@ -62,7 +62,6 @@ endforeach;
 * MIT
 
 ## TODO
-* countOffers()
 * getCurrencies()
 * setDefaultCurrency()
 * Offers price according set defaultCurrency
