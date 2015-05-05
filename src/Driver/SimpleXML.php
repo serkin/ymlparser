@@ -83,7 +83,20 @@ class SimpleXML implements DriverInterface
      */
     public function getCurrencies()
     {
-        return [];
+        
+        $returnArr = [];
+
+        foreach ($this->xml->shop->currencies->currency as $category):
+
+            $arr = array_merge(
+                ['value' => (string) $category],
+                $this->getElementAttributes($category));
+
+        $returnArr[] = new \YMLParser\Node\Currency($arr);
+
+        endforeach;
+
+        return $returnArr;
     }
 
     /**
@@ -95,9 +108,9 @@ class SimpleXML implements DriverInterface
     {
         $returnValue = 0;
 
-        while ($this->getOffers($filter)):
+        foreach ($this->getOffers($filter) as $el):
             $returnValue++;
-        endwhile;
+        endforeach;
 
         return $returnValue;
     }

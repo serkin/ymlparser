@@ -77,4 +77,16 @@ class YMLParser_Driver_XMLReader extends PHPUnit_Framework_TestCase
 
         $this->assertEquals(4, $result);
     }
+
+    public function testRetrivedCurrencies()
+    {
+        $filename = dirname(dirname(__DIR__)).'/fixtures/valid_xml.xml';
+        $yml = new YMLParser(new Driver\XMLReader());
+        $yml->open($filename);
+
+        $result = $yml->getCurrencies();
+
+        $this->assertNotEmpty($result);
+        $this->assertEquals(3, count($result));
+    }
 }

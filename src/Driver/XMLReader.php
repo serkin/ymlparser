@@ -65,7 +65,35 @@ class XMLReader implements DriverInterface
      */
     public function getCurrencies()
     {
-        return [];
+        
+        $returnArr = [];
+        $this->moveToStart();
+        $xml = $this->xml;
+
+        while ($xml->read()) {
+            if ($xml->nodeType == \XMLReader::ELEMENT && $xml->name == 'currencies') {
+                while ($xml->read() && $xml->name != 'currencies') {
+                    if ($xml->nodeType == \XMLReader::ELEMENT) {
+                        $arr = [];
+
+                        if ($xml->hasAttributes):
+
+                            while ($xml->moveToNextAttribute()):
+                                $arr[strtolower($xml->name)] = $xml->value;
+                        endwhile;
+                        endif;
+
+                        $xml->read();
+                        $arr['value'] = $xml->value;
+                        $returnArr[] = new \YMLParser\Node\Currency($arr);
+
+                        unset($arr);
+                    }
+                }
+            }
+        }
+
+        return $returnArr;
     }
 
     /**
@@ -165,9 +193,9 @@ class XMLReader implements DriverInterface
     {
         $returnValue = 0;
 
-        while ($this->getOffers($filter)):
+        foreach ($this->getOffers($filter) as $el):
             $returnValue++;
-        endwhile;
+        endforeach;
 
         return $returnValue;
     }
