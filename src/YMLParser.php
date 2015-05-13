@@ -51,7 +51,7 @@ class YMLParser
      */
     public function open($filename)
     {
-        if (file_exists($filename) === false or filesize($filename) === 0):
+        if (file_exists($filename) === false || filesize($filename) === 0):
             throw new \Exception("File: {$filename} does not exist or empty.");
         endif;
 
