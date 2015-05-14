@@ -14,10 +14,6 @@ class SimpleXML implements DriverInterface
      */
     private $xml;
 
-    /**
-     * @var string
-     */
-    private $filename;
 
     /**
      * Gets categories.
@@ -124,7 +120,7 @@ class SimpleXML implements DriverInterface
      */
     public function open($filename)
     {
-        $this->filename = $filename;
+
         $this->xml = simplexml_load_file($filename);
 
         return (bool) $this->xml;
