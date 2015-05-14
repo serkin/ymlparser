@@ -17,26 +17,14 @@ class YMLParser
     private $driver;
 
     /**
-     * Curent curency.
-     *
-     * @var string
+     * 
+     * @param \YMLParser\Driver\DriverInterface $driver
      */
-    private $defaultCurrency;
-
     public function __construct(Driver\DriverInterface $driver)
     {
         $this->driver = $driver;
     }
 
-    /**
-     * Sets default currency.
-     *
-     * @param string $currency
-     */
-    public function setDefaultCurrency($currency)
-    {
-        $this->defaultCurrency = $currency;
-    }
 
     /**
      * Opeтs and creates XML DOM tree.
