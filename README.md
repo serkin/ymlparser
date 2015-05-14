@@ -1,7 +1,19 @@
 # YML Parser
-Parser for yml(yandex.market.ru) files. YMLParser out of box uses two types of parsing:
+Parser for yml(yandex.market.ru) files.
+
+[![Build Status](https://img.shields.io/travis/serkin/ymlparser.svg?style=flat-square)](https://travis-ci.org/serkin/parser)
+[![Coverage Status](https://img.shields.io/coveralls/serkin/ymlparser/master.svg?style=flat-square)](https://coveralls.io/r/serkin/ymlparser?branch=master)
+[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/serkin/ymlparser.svg?style=flat-square)](https://scrutinizer-ci.com/g/serkin/ymlparser/?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/serkin/ymlparser/v/stable)](https://packagist.org/packages/serkin/ymlparser)
+[![Total Downloads](https://poser.pugx.org/serkin/ymlparser/downloads)](https://packagist.org/packages/serkin/ymlparser)
+[![Latest Unstable Version](https://poser.pugx.org/serkin/ymlparser/v/unstable)](https://packagist.org/packages/serkin/ymlparser)
+[![License](https://poser.pugx.org/serkin/ymlparser/license)](https://packagist.org/packages/serkin/ymlparser)
+
+YMLParser out of box uses two types of parsing:
 * XMLReader - for medium and large xml files
 * SimpleXML - for small xml files
+
+
 
 ## Installation
 ---
