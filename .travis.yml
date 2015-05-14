@@ -6,7 +6,8 @@ php:
   - 7.0
 
 sudo: false
-
+before_install:
+  - composer self-update
 before_script:
   - if [[ "$TRAVIS_PHP_VERSION" == '5.6' ]]; then composer require satooshi/php-coveralls:dev-master -n ; fi
   - if [[ "$TRAVIS_PHP_VERSION" != '5.6' ]]; then composer install -n ; fi
