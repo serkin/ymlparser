@@ -23,6 +23,12 @@ class YMLParser_Driver_SimpleXML extends PHPUnit_Framework_TestCase
         $yml->open($filename);
 
         $result = $yml->getCategories();
+        
+
+        $this->assertTrue($result[0] instanceof \YMLParser\Node\Category);
+        $this->assertEquals($result[0]->getChildren(),[]);
+        $this->assertTrue($result[0]->hasParentCategory());
+        $this->assertTrue($result[0]->getParentCategory() instanceof \YMLParser\Node\Category);
 
         $this->assertNotEmpty($result);
         $this->assertEquals(9, count($result));

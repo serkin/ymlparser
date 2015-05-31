@@ -16,6 +16,7 @@ class Category extends \ArrayObject
      */
     public function getChildren()
     {
+        return [];
     }
 
     /**
@@ -25,6 +26,7 @@ class Category extends \ArrayObject
      */
     public function getParentCategory()
     {
+        return new self([]);
     }
 
     /**
@@ -34,5 +36,6 @@ class Category extends \ArrayObject
      */
     public function hasParentCategory()
     {
+        return true;
     }
 }
