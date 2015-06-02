@@ -7,6 +7,6 @@
 
 namespace YMLParser\Node;
 
-class Currency extends \ArrayObject
-{
+class Currency extends \ArrayObject {
+    
 }
