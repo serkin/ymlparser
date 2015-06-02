@@ -7,30 +7,27 @@
 
 namespace YMLParser\Driver;
 
-class SimpleXML implements DriverInterface
-{
+class SimpleXML implements DriverInterface {
+
     /**
      * @var \SimpleXMLElement
      */
     private $xml;
-
 
     /**
      * Gets categories.
      *
      * @return arry Array of \YMLParser\Node\Category instances or empty array
      */
-    public function getCategories()
-    {
+    public function getCategories() {
         $returnArr = [];
 
         foreach ($this->xml->shop->categories->category as $category):
 
             $arr = array_merge(
-                ['value' => (string) $category],
-                $this->getElementAttributes($category));
+                    ['value' => (string) $category], $this->getElementAttributes($category));
 
-        $returnArr[] = new \YMLParser\Node\Category($arr);
+            $returnArr[] = new \YMLParser\Node\Category($arr);
 
         endforeach;
 
@@ -44,8 +41,7 @@ class SimpleXML implements DriverInterface
      *
      * @return \Iterator Array of of \YMLParser\Node\Offer instances or empty array
      */
-    public function getOffers(\Closure $filter = null)
-    {
+    public function getOffers(\Closure $filter = null) {
         foreach ($this->xml->shop->offers->offer as $offer) {
 
             $arr = $this->getElementAttributes($offer);
@@ -68,7 +64,6 @@ class SimpleXML implements DriverInterface
             } else {
                 yield $returnValue;
             }
-
         }
     }
 
@@ -77,18 +72,16 @@ class SimpleXML implements DriverInterface
      *
      * @return array
      */
-    public function getCurrencies()
-    {
+    public function getCurrencies() {
 
         $returnArr = [];
 
         foreach ($this->xml->shop->currencies->currency as $category):
 
             $arr = array_merge(
-                ['value' => (string) $category],
-                $this->getElementAttributes($category));
+                    ['value' => (string) $category], $this->getElementAttributes($category));
 
-        $returnArr[] = new \YMLParser\Node\Currency($arr);
+            $returnArr[] = new \YMLParser\Node\Currency($arr);
 
         endforeach;
 
@@ -100,8 +93,7 @@ class SimpleXML implements DriverInterface
      *
      * @return int
      */
-    public function countOffers(\Closure $filter = null)
-    {
+    public function countOffers(\Closure $filter = null) {
         $returnValue = 0;
 
         foreach ($this->getOffers($filter) as $el):
@@ -118,8 +110,7 @@ class SimpleXML implements DriverInterface
      *
      * @return bool
      */
-    public function open($filename)
-    {
+    public function open($filename) {
 
         $this->xml = simplexml_load_file($filename);
 
@@ -133,18 +124,15 @@ class SimpleXML implements DriverInterface
      *
      * @return array
      */
-    private function parseParamsFromElement(\SimpleXMLElement $offer)
-    {
+    private function parseParamsFromElement(\SimpleXMLElement $offer) {
         $returnArr = [];
 
         foreach ($offer->children() as $element) {
 
             if (mb_strtolower($element->getName()) == 'param') {
                 $returnArr[] = array_merge(
-                            ['value' => (string) $element],
-                            $this->getElementAttributes($element)
-                    );
-
+                        ['value' => (string) $element], $this->getElementAttributes($element)
+                );
             }
         }
 
@@ -158,8 +146,7 @@ class SimpleXML implements DriverInterface
      *
      * @return array
      */
-    private function getElementAttributes(\SimpleXMLElement $element)
-    {
+    private function getElementAttributes(\SimpleXMLElement $element) {
         $returnArr = [];
 
         foreach ($element->attributes() as $attrName => $attrValue):
@@ -168,4 +155,5 @@ class SimpleXML implements DriverInterface
 
         return $returnArr;
     }
+
 }

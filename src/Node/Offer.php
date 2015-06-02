@@ -7,8 +7,8 @@
 
 namespace YMLParser\Node;
 
-class Offer extends \ArrayObject
-{
+class Offer extends \ArrayObject {
+
     /**
      * Ges price.
      *
@@ -16,8 +16,8 @@ class Offer extends \ArrayObject
      *
      * @return integer
      */
-    public function getPrice($currency = 'RUR')
-    {
+    public function getPrice($currency = 'RUR') {
         return 0;
     }
+
 }

@@ -7,8 +7,8 @@
 
 namespace YMLParser\Driver;
 
-interface DriverInterface
-{
+interface DriverInterface {
+
     /**
      * Creates XML Parser according with driver.
      *
