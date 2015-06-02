@@ -10,16 +10,13 @@
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
-        <testsuite name="foler">
-            <directory suffix=".php">tests/unit/</directory>
+        <testsuite name="ymlparser">
+            <directory suffix=".php">tests/unit</directory>
         </testsuite>
     </testsuites>
     <filter>
         <whitelist>
-            <directory suffix=".php">classes/</directory>
-            <exclude>
-              <file>classes/export/Spyc.php</file>
-            </exclude>
+            <directory suffix=".php">src/</directory>
         </whitelist>
     </filter>
     <logging>
