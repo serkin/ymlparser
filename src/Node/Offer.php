@@ -14,7 +14,7 @@ class Offer extends \ArrayObject
      *
      * @param string $currency
      *
-     * @return float
+     * @return integer
      */
     public function getPrice($currency = 'RUR')
     {

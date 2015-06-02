@@ -30,7 +30,7 @@ interface DriverInterface
      *
      * @param \Closure $filter
      *
-     * @return \Generator
+     * @return \Iterator
      */
     public function getOffers(\Closure $filter = null);
 

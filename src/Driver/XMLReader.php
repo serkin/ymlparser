@@ -101,7 +101,7 @@ class XMLReader implements DriverInterface
      *
      * @param \Closure $filter
      *
-     * @return array Array of \YMLParser\Node\Offer instances or empty array
+     * @return \Iterator Array of \YMLParser\Node\Offer instances or empty array
      */
     public function getOffers(\Closure $filter = null)
     {

@@ -42,7 +42,7 @@ class SimpleXML implements DriverInterface
      *
      * @param \Closure $filter Anonymous function
      *
-     * @return array Array of \YMLParser\Node\Offer instances or empty array
+     * @return \Iterator Array of of \YMLParser\Node\Offer instances or empty array
      */
     public function getOffers(\Closure $filter = null)
     {
