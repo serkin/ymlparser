@@ -17,7 +17,7 @@ class YMLParser
     private $driver;
 
     /**
-     * 
+     *
      * @param \YMLParser\Driver\DriverInterface $driver
      */
     public function __construct(Driver\DriverInterface $driver)
@@ -27,7 +27,7 @@ class YMLParser
 
 
     /**
-     * Opeтs and creates XML DOM tree.
+     * OpeС‚s and creates XML DOM tree.
      *
      * Sets error for YMLParser if cannot open file or xml is invalid
      *

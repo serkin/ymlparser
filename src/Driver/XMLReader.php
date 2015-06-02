@@ -38,12 +38,12 @@ class XMLReader implements DriverInterface
                     if ($xml->nodeType == \XMLReader::ELEMENT) {
                         $arr = [];
 
-                        if ($xml->hasAttributes):
+                        if ($xml->hasAttributes) {
 
-                            while ($xml->moveToNextAttribute()):
+                            while ($xml->moveToNextAttribute()) {
                                 $arr[strtolower($xml->name)] = $xml->value;
-                        endwhile;
-                        endif;
+                            }
+                        }
 
                         $xml->read();
                         $arr['value'] = $xml->value;
@@ -65,7 +65,7 @@ class XMLReader implements DriverInterface
      */
     public function getCurrencies()
     {
-        
+
         $returnArr = [];
         $this->moveToStart();
         $xml = $this->xml;
@@ -76,12 +76,12 @@ class XMLReader implements DriverInterface
                     if ($xml->nodeType == \XMLReader::ELEMENT) {
                         $arr = [];
 
-                        if ($xml->hasAttributes):
+                        if ($xml->hasAttributes) {
 
-                            while ($xml->moveToNextAttribute()):
+                            while ($xml->moveToNextAttribute()) {
                                 $arr[strtolower($xml->name)] = $xml->value;
-                        endwhile;
-                        endif;
+                            }
+                        }
 
                         $xml->read();
                         $arr['value'] = $xml->value;
@@ -114,31 +114,35 @@ class XMLReader implements DriverInterface
                     if ($xml->nodeType == \XMLReader::ELEMENT && $xml->name == 'offer') {
                         $arr = $this->getElementAttributes($xml);
 
-                        while ($xml->read() && $xml->name != 'offer'):
+                        while ($xml->read() && $xml->name != 'offer') {
 
-                            if ($xml->nodeType == \XMLReader::ELEMENT):
+                            if ($xml->nodeType == \XMLReader::ELEMENT) {
 
                                 $name = mb_strtolower($xml->name);
 
-                        if ($name == 'param'):
+                                if ($name == 'param') {
                                     $tmpArr = ['name' => $xml->getAttribute('name')];
-                        endif;
+                                }
 
-                        $xml->read();
+                                $xml->read();
 
-                        if ($name == 'param'):
-                                    $arr['params'][] = array_merge(['value' => $xml->value], $tmpArr); else:
+                                if ($name == 'param') {
+                                    $arr['params'][] = array_merge(['value' => $xml->value], $tmpArr);
+                                } else {
                                     $arr[$name] = $xml->value;
-                        endif;
-                        endif;
-                        endwhile;
+                                }
+                            }
+                        }
 
-                        if (!is_null($filter)):
-                            if ($filter($arr)):
-                                yield $arr;
-                        endif; else:
-                            yield $arr;
-                        endif;
+                        $returnValue = new \YMLParser\Node\Offer($arr);
+
+                        if (!is_null($filter)) {
+                            if ($filter($returnValue)) {
+                                yield $returnValue;
+                            }
+                        } else {
+                            yield $returnValue;
+                        }
                     }
                 }
             }
