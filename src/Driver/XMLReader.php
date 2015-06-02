@@ -7,8 +7,8 @@
 
 namespace YMLParser\Driver;
 
-class XMLReader implements DriverInterface
-{
+class XMLReader implements DriverInterface {
+
     /**
      * @var \XMLReader
      */
@@ -26,8 +26,7 @@ class XMLReader implements DriverInterface
      *
      * @return arry Array of \YMLParser\Node\Category instances or empty array
      */
-    public function getCategories()
-    {
+    public function getCategories() {
         $returnArr = [];
         $this->moveToStart();
         $xml = $this->xml;
@@ -63,8 +62,7 @@ class XMLReader implements DriverInterface
      *
      * @return array
      */
-    public function getCurrencies()
-    {
+    public function getCurrencies() {
 
         $returnArr = [];
         $this->moveToStart();
@@ -103,8 +101,7 @@ class XMLReader implements DriverInterface
      *
      * @return array Array of \YMLParser\Node\Offer instances or empty array
      */
-    public function getOffers(\Closure $filter = null)
-    {
+    public function getOffers(\Closure $filter = null) {
         $this->moveToStart();
         $xml = $this->xml;
 
@@ -156,8 +153,7 @@ class XMLReader implements DriverInterface
      *
      * @return array
      */
-    private function getElementAttributes(\XMLReader $element)
-    {
+    private function getElementAttributes(\XMLReader $element) {
         $returnArr = [];
 
         if ($element->hasAttributes) {
@@ -178,8 +174,7 @@ class XMLReader implements DriverInterface
      *
      * @return bool
      */
-    public function open($filename)
-    {
+    public function open($filename) {
         $this->filename = $filename;
         $this->xml = new \XMLReader();
 
@@ -193,8 +188,7 @@ class XMLReader implements DriverInterface
      *
      * @return int
      */
-    public function countOffers(\Closure $filter = null)
-    {
+    public function countOffers(\Closure $filter = null) {
         $returnValue = 0;
 
         foreach ($this->getOffers($filter) as $el):
@@ -209,10 +203,10 @@ class XMLReader implements DriverInterface
      *
      * @return bool
      */
-    private function moveToStart()
-    {
+    private function moveToStart() {
         $this->xml->close();
 
         return $this->xml->open($this->filename);
     }
+
 }
