@@ -35,6 +35,7 @@ class YMLParser_Driver_SimpleXML extends PHPUnit_Framework_TestCase {
 
         $this->assertNotEmpty($result);
         $this->assertEquals(9, count($result));
+        $this->assertTrue($result[0] instanceof \YMLParser\Node\Category);
     }
 
     public function testRetrivingOffers() {
@@ -46,6 +47,8 @@ class YMLParser_Driver_SimpleXML extends PHPUnit_Framework_TestCase {
 
         $this->assertNotEmpty($result);
         $this->assertEquals(5, count($result));
+        $this->assertTrue($result[0] instanceof \YMLParser\Node\Offer);
+        $this->assertTrue(is_numeric($result[0]->getPrice()));
     }
 
     public function testRetrivingOffersWithAppliedFilter() {
@@ -92,6 +95,7 @@ class YMLParser_Driver_SimpleXML extends PHPUnit_Framework_TestCase {
 
         $this->assertNotEmpty($result);
         $this->assertEquals(3, count($result));
+        $this->assertTrue($result[0] instanceof \YMLParser\Node\Currency);
     }
 
 }

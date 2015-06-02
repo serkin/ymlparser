@@ -134,12 +134,14 @@ class XMLReader implements DriverInterface
                             }
                         }
 
+                        $returnValue = new \YMLParser\Node\Offer($arr);
+
                         if (!is_null($filter)) {
-                            if ($filter($arr)) {
-                                yield $arr;
+                            if ($filter($returnValue)) {
+                                yield $returnValue;
                             }
                         } else {
-                            yield $arr;
+                            yield $returnValue;
                         }
                     }
                 }

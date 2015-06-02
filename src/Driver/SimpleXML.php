@@ -59,7 +59,7 @@ class SimpleXML implements DriverInterface
                 }
             }
 
-            $returnValue = new \YMLParser\Node\Category($arr);
+            $returnValue = new \YMLParser\Node\Offer($arr);
 
             if (!is_null($filter)) {
                 if ($filter($returnValue)) {
