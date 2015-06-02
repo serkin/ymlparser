@@ -2,7 +2,7 @@
 
 /**
  * @author Serkin Alexander <serkin.alexander@gmail.com>
- * @license https://github.com/serkin/ymlparser/LICENSE MIT
+ * @license https://github.com/serkin/ymlparser/LICENSE  MIT
  */
 
 namespace YMLParser\Node;
