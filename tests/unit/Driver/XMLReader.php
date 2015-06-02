@@ -53,7 +53,7 @@ class YMLParser_Driver_XMLReader extends PHPUnit_Framework_TestCase
         $this->assertNotEmpty($result);
         $this->assertEquals(4, count($result));
     }
-    
+
     public function testCountRetrivedOffers()
     {
         $filename = dirname(dirname(__DIR__)).'/fixtures/valid_xml.xml';

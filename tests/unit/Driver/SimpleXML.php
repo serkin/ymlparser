@@ -23,7 +23,7 @@ class YMLParser_Driver_SimpleXML extends PHPUnit_Framework_TestCase
         $yml->open($filename);
 
         $result = $yml->getCategories();
-        
+
 
         $this->assertTrue($result[0] instanceof \YMLParser\Node\Category);
         $this->assertEquals($result[0]->getChildren(),[]);
@@ -59,7 +59,7 @@ class YMLParser_Driver_SimpleXML extends PHPUnit_Framework_TestCase
         $this->assertNotEmpty($result);
         $this->assertEquals(4, count($result));
     }
-    
+
     public function testCountRetrivedOffers()
     {
         $filename = dirname(dirname(__DIR__)).'/fixtures/valid_xml.xml';
