@@ -1,136 +1,129 @@
-﻿﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE yml_catalog SYSTEM "http://partner.market.yandex.ru/pages/help/shops.dtd">
 <yml_catalog date="2015-04-23 11:00">
-  <shop>
-    <name>СарПромТовар</name>
-    <company>СарПромТовар</company>
-    <url>http://sarpromtovar.ru</url>
-    <currencies>
-      <currency id="RUR" rate="1" />
-      <currency id="EUR" rate="57.72" />
-      <currency id="USD" rate="53.66" />
-    </currencies>
-    <categories>
-      <category id="5700">Электростанции</category>
-      <category id="5701" parentId="5700">Бензогенераторы</category>
-      <category id="5702">Сварочное оборудование</category>
-      <category id="5703" parentId="5702">Ручная дуговая сварка (MMA)</category>
-      <category id="5704" parentId="5700">Комплектующие для электростанций</category>
-      <category id="5705">Стабилизаторы напряжения</category>
-      <category id="5898" parentId="5828">Приводы передвижения тали</category>
-      <category id="5899" parentId="5824">Бочкокантователи</category>
-      <category id="5900" parentId="5791">Инверторы</category>
-    </categories>
-    <offers>
-      <offer id="12395" available="true" type="vendor.model">
-        <url>http://sarpromtovar.ru/products/stabilizator-napriazheniia-resanta-ach2000-n1ts</url>
-        <price>3970</price>
-        <currencyId>RUR</currencyId>
-        <categoryId>5707</categoryId>
-        <picture>http://sarpromtovar.ru/pictures/product/big/3858_big.jpg</picture>
-        <delivery>true</delivery>
-        <!-- Comment block for testing filter function on getOffers() method 
-            <vendor>Ресанта</vendor>
-        -->
-        <vendorCode>63/6/15</vendorCode>
-        <model>Стабилизатор напряжения настенный Ресанта ACH-2000 Н/1-Ц lux</model>
-        <description>&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;Ресанта ACH-2000 Н/1-Ц &amp;lt;/strong&amp;gt; предназначен для обеспечения стабильного напряжения и защиты оборудования от скачков напряжения. Улучшает функционирование приборов, гарантируя их работоспособность и экономя их энергопотребление.&amp;lt;/p&amp;gt;
-</description>
-        <manufacturer_warranty>true</manufacturer_warranty>
-        <param name="Тип стабилизатора напряжения">ступенчатый релейный</param>
-        <param name="Полная мощность, ВА">2000</param>
-        <param name="Активная мощность, Вт">1600</param>
-        <param name="Нижний рабочий предел стабилизации, Вольт">140</param>
-        <param name="Верхний рабочий предел стабилизации, Вольт">260</param>
-        <param name="Точность стабилизации, %">&amp;#177;8</param>
-        <param name="Количество фаз">1</param>
-        <param name="Тип размещения">Настенное</param>
-      </offer>
-      <offer id="12396" available="true" type="vendor.model">
-        <url>http://sarpromtovar.ru/products/stabilizator-napriazheniia-resanta-ach3000-n1ts</url>
-        <price>4820</price>
-        <currencyId>RUR</currencyId>
-        <categoryId>5707</categoryId>
-        <picture>http://sarpromtovar.ru/pictures/product/big/3859_big.jpg</picture>
-        <delivery>true</delivery>
-        <vendor>Ресанта</vendor>
-        <vendorCode>63/6/21</vendorCode>
-        <model>Стабилизатор напряжения настенный Ресанта ACH-3000 Н/1-Ц lux</model>
-        <description>&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;Ресанта ACH-3000 Н/1-Ц &amp;lt;/strong&amp;gt; предназначен для обеспечения стабильного напряжения и защиты оборудования от скачков напряжения. Улучшает функционирование приборов, гарантируя их работоспособность и экономя их энергопотребление.&amp;lt;/p&amp;gt;
-</description>
-        <manufacturer_warranty>true</manufacturer_warranty>
-        <param name="Тип стабилизатора напряжения">ступенчатый релейный</param>
-        <param name="Полная мощность, ВА">3000</param>
-        <param name="Активная мощность, Вт">2400</param>
-        <param name="Нижний рабочий предел стабилизации, Вольт">140</param>
-        <param name="Верхний рабочий предел стабилизации, Вольт">260</param>
-        <param name="Точность стабилизации, %">&amp;#177;8</param>
-        <param name="Количество фаз">1</param>
-        <param name="Тип размещения">Настенное</param>
-      </offer>
-      <offer id="17816" available="false" type="vendor.model">
-        <url>http://sarpromtovar.ru/products/stabilizator-napryazheniya-foxweld-evolution-10000</url>
-        <price>11340</price>
-        <currencyId>RUR</currencyId>
-        <categoryId>5707</categoryId>
-        <picture>http://sarpromtovar.ru/pictures/product/big/9705_big.jpg</picture>
-        <delivery>true</delivery>
-        <vendor>FoxWeld</vendor>
-        <vendorCode>4733</vendorCode>
-        <model>Стабилизатор напряжения FoxWeld Evolution 10000</model>
-        <description>&amp;lt;p&amp;gt;Стабилизатор напряжения &amp;lt;strong&amp;gt;FoxWeld Evolution 10000&amp;lt;/strong&amp;gt; &amp;amp;ndash; навесное устройство высокой мощности, которое обеспечивает качественное электроснабжение дорогого оборудования, непрерывно контролируя напряжение на входе и выходе.&amp;lt;/p&amp;gt;
-</description>
-        <manufacturer_warranty>true</manufacturer_warranty>
-        <param name="Тип стабилизатора напряжения">ступенчатый релейный</param>
-        <param name="Активная мощность, Вт">10000</param>
-        <param name="Нижний рабочий предел стабилизации, Вольт">125</param>
-        <param name="Верхний рабочий предел стабилизации, Вольт">270</param>
-        <param name="Точность стабилизации, %">&amp;#177;8</param>
-        <param name="Количество фаз">1</param>
-        <param name="Тип размещения">Настенное</param>
-      </offer>
-      <offer id="17817" available="false" type="vendor.model">
-        <url>http://sarpromtovar.ru/products/stabilizator-napryazheniya-foxweld-evolution-15000</url>
-        <price>26258</price>
-        <currencyId>RUR</currencyId>
-        <categoryId>5707</categoryId>
-        <picture>http://sarpromtovar.ru/pictures/product/big/9707_big.jpg</picture>
-        <delivery>true</delivery>
-        <vendor>FoxWeld</vendor>
-        <vendorCode>4941</vendorCode>
-        <model>Стабилизатор напряжения FoxWeld Evolution 15000</model>
-        <description>&amp;lt;p&amp;gt;Стабилизатор напряжения &amp;lt;strong&amp;gt;FoxWeld Evolution 15000&amp;lt;/strong&amp;gt; &amp;amp;ndash; стационарное устройство высокой мощности, которое обеспечивает качественное электроснабжение дорогого оборудования, непрерывно контролируя напряжение на входе и выходе.&amp;lt;/p&amp;gt;
-</description>
-        <manufacturer_warranty>true</manufacturer_warranty>
-        <param name="Тип стабилизатора напряжения">ступенчатый релейный</param>
-        <param name="Активная мощность, Вт">15000</param>
-        <param name="Нижний рабочий предел стабилизации, Вольт">140</param>
-        <param name="Верхний рабочий предел стабилизации, Вольт">270</param>
-        <param name="Точность стабилизации, %">&amp;#177;3</param>
-        <param name="Количество фаз">1</param>
-        <param name="Тип размещения">Напольное</param>
-      </offer>
-      <offer id="17818" available="false" type="vendor.model">
-        <url>http://sarpromtovar.ru/products/stabilizator-napryazheniya-foxweld-evolution-20000</url>
-        <price>30401</price>
-        <currencyId>RUR</currencyId>
-        <categoryId>5707</categoryId>
-        <picture>http://sarpromtovar.ru/pictures/product/big/9709_big.jpg</picture>
-        <delivery>true</delivery>
-        <vendor>FoxWeld</vendor>
-        <vendorCode>4942</vendorCode>
-        <model>Стабилизатор напряжения FoxWeld Evolution 20000</model>
-        <description>&amp;lt;p&amp;gt;Стабилизатор напряжения &amp;lt;strong&amp;gt;FoxWeld Evolution 20000&amp;lt;/strong&amp;gt; &amp;amp;ndash; стационарное устройство высокой мощности, которое обеспечивает качественное электроснабжение дорогого оборудования, непрерывно контролируя напряжение на входе и выходе.&amp;lt;/p&amp;gt;
-</description>
-        <manufacturer_warranty>true</manufacturer_warranty>
-        <param name="Тип стабилизатора напряжения">ступенчатый релейный</param>
-        <param name="Активная мощность, Вт">20000</param>
-        <param name="Нижний рабочий предел стабилизации, Вольт">140</param>
-        <param name="Верхний рабочий предел стабилизации, Вольт">270</param>
-        <param name="Точность стабилизации, %">&amp;#177;3</param>
-        <param name="Количество фаз">1</param>
-        <param name="Тип размещения">Напольное</param>
-      </offer>
-    </offers>
-  </shop>
+    <shop>
+        <name>Store 1</name>
+        <company>Company 1</company>
+        <url>http://mycompany.com</url>
+        <currencies>
+            <currency id="RUR" rate="1" />
+            <currency id="EUR" rate="57.72" />
+            <currency id="USD" rate="53.66" />
+        </currencies>
+        <categories>
+            <category id="5700">Category</category>
+            <category id="5701" parentId="5700">Category</category>
+            <category id="5702">Category</category>
+            <category id="5703" parentId="5702">Category</category>
+            <category id="5704" parentId="5700">Category</category>
+            <category id="5705">Category</category>
+            <category id="5898" parentId="5828">Category</category>
+            <category id="5899" parentId="5824"></category>
+            <category id="5900" parentId="5791">Category</category>
+        </categories>
+        <offers>
+            <offer id="12395" available="true" type="vendor.model">
+                <url>http://mycompany.com/products/stabilizator-napriazheniia-resanta-ach2000-n1ts</url>
+                <price>3970</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>5707</categoryId>
+                <picture>http://mycompany.com/pictures/product/big/3858_big.jpg</picture>
+                <delivery>true</delivery>
+                <!-- Comment block for testing filter function on getOffers() method
+                    <vendor>Makita</vendor>
+                -->
+                <vendorCode>63/6/15</vendorCode>
+                <model>DT 20000</model>
+                <description>Description</description>
+                <manufacturer_warranty>true</manufacturer_warranty>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+            </offer>
+            <offer id="12396" available="true" type="vendor.model">
+                <url>http://mycompany.com/products/stabilizator-napriazheniia-resanta-ach3000-n1ts</url>
+                <price>4820</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>5707</categoryId>
+                <picture>http://mycompany.com/pictures/product/big/3859_big.jpg</picture>
+                <delivery>true</delivery>
+                <vendor>Makita</vendor>
+                <vendorCode>63/6/21</vendorCode>
+                <model>DT 20000</model>
+                <description>Description</description>
+                <manufacturer_warranty>true</manufacturer_warranty>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+            </offer>
+            <offer id="17816" available="false" type="vendor.model">
+                <url>http://mycompany.com/products/stabilizator-napryazheniya-foxweld-evolution-10000</url>
+                <price>11340</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>5707</categoryId>
+                <picture>http://mycompany.com/pictures/product/big/9705_big.jpg</picture>
+                <delivery>true</delivery>
+                <vendor>FoxWeld</vendor>
+                <vendorCode>4733</vendorCode>
+                <model>DT 20000</model>
+                <description>Description</description>
+                <manufacturer_warranty>true</manufacturer_warranty>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+            </offer>
+            <offer id="17817" available="false" type="vendor.model">
+                <url>http://mycompany.com/products/stabilizator-napryazheniya-foxweld-evolution-15000</url>
+                <price>26258</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>5707</categoryId>
+                <picture>http://mycompany.com/pictures/product/big/9707_big.jpg</picture>
+                <delivery>true</delivery>
+                <vendor>FoxWeld</vendor>
+                <vendorCode>4941</vendorCode>
+                <model>DT 20000</model>
+                <description>Description</description>
+                <manufacturer_warranty>true</manufacturer_warranty>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+            </offer>
+            <offer id="17818" available="false" type="vendor.model">
+                <url>http://mycompany.com/products/stabilizator-napryazheniya-foxweld-evolution-20000</url>
+                <price>30401</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>5707</categoryId>
+                <picture>http://mycompany.com/pictures/product/big/9709_big.jpg</picture>
+                <delivery>true</delivery>
+                <vendor>FoxWeld</vendor>
+                <vendorCode>4942</vendorCode>
+                <model>DT 20000</model>
+                <description>Description</description>
+                <manufacturer_warranty>true</manufacturer_warranty>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+                <param name="Capacity">500W</param>
+            </offer>
+        </offers>
+    </shop>
 </yml_catalog>
