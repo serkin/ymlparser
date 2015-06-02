@@ -46,30 +46,30 @@ class SimpleXML implements DriverInterface
      */
     public function getOffers(\Closure $filter = null)
     {
-        foreach ($this->xml->shop->offers->offer as $offer):
+        foreach ($this->xml->shop->offers->offer as $offer) {
 
             $arr = $this->getElementAttributes($offer);
-        $arr['params'] = $this->parseParamsFromElement($offer);
+            $arr['params'] = $this->parseParamsFromElement($offer);
 
-        foreach ($offer->children() as $element):
+            foreach ($offer->children() as $element) {
                 $name = mb_strtolower($element->getName());
 
-        if ($name != 'param'):
+                if ($name != 'param') {
                     $arr[$name] = (string) $element;
-        endif;
+                }
+            }
 
-        endforeach;
+            $returnValue = new \YMLParser\Node\Category($arr);
 
-        $returnValue = new \YMLParser\Node\Category($arr);
-
-        if (!is_null($filter)):
-                if ($filter($returnValue)):
+            if (!is_null($filter)) {
+                if ($filter($returnValue)) {
                     yield $returnValue;
-        endif; else:
+                }
+            } else {
                 yield $returnValue;
-        endif;
+            }
 
-        endforeach;
+        }
     }
 
     /**
@@ -79,7 +79,7 @@ class SimpleXML implements DriverInterface
      */
     public function getCurrencies()
     {
-        
+
         $returnArr = [];
 
         foreach ($this->xml->shop->currencies->currency as $category):
@@ -137,17 +137,16 @@ class SimpleXML implements DriverInterface
     {
         $returnArr = [];
 
-        foreach ($offer->children() as $element):
+        foreach ($offer->children() as $element) {
 
-            if (mb_strtolower($element->getName()) == 'param'):
+            if (mb_strtolower($element->getName()) == 'param') {
                 $returnArr[] = array_merge(
                             ['value' => (string) $element],
                             $this->getElementAttributes($element)
                     );
 
-        endif;
-
-        endforeach;
+            }
+        }
 
         return $returnArr;
     }
