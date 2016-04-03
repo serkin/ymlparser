@@ -46,6 +46,7 @@ class SimpleXML implements DriverInterface {
 
             $arr = $this->getElementAttributes($offer);
             $arr['params'] = $this->parseParamsFromElement($offer);
+            $arr['pictures'] = $this->parsePicturesFromElement($offer);
 
             foreach ($offer->children() as $element) {
                 $name = mb_strtolower($element->getName());
@@ -133,6 +134,26 @@ class SimpleXML implements DriverInterface {
                 $returnArr[] = array_merge(
                         ['value' => (string) $element], $this->getElementAttributes($element)
                 );
+            }
+        }
+
+        return $returnArr;
+    }
+
+    /**
+     * Gets element pictures.
+     *
+     * @param \SimpleXMLElement $offer
+     *
+     * @return array
+     */
+    private function parsePicturesFromElement(\SimpleXMLElement $offer) {
+        $returnArr = [];
+
+        foreach ($offer->children() as $element) {
+
+            if (mb_strtolower($element->getName()) == 'picture') {
+                $returnArr[] = (string) $element;
             }
         }
 

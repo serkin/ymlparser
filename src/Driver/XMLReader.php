@@ -126,6 +126,10 @@ class XMLReader implements DriverInterface {
                                 if ($name == 'param') {
                                     $arr['params'][] = array_merge(['value' => $xml->value], $tmpArr);
                                 } else {
+                                    if ($name == 'picture') {
+                                        $arr['pictures'][] = $xml->value;
+                                    }
+
                                     $arr[$name] = $xml->value;
                                 }
                             }
