@@ -41,6 +41,7 @@ class YMLParser_Driver_XMLReader extends PHPUnit_Framework_TestCase {
 
         $this->assertNotEmpty($result);
         $this->assertEquals(5, count($result));
+        $this->assertEquals(3, count($result[0]['pictures']));
         $this->assertTrue($result[0] instanceof \YMLParser\Node\Offer);
         $this->assertTrue(is_numeric($result[0]->getPrice()));
     }

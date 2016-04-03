@@ -28,6 +28,8 @@
                 <currencyId>RUR</currencyId>
                 <categoryId>5707</categoryId>
                 <picture>http://mycompany.com/pictures/product/big/3858_big.jpg</picture>
+                <picture>http://mycompany.com/pictures/product/big/3858_big_2.jpg</picture>
+                <picture>http://mycompany.com/pictures/product/big/3858_big_3.jpg</picture>
                 <delivery>true</delivery>
                 <!-- Comment block for testing filter function on getOffers() method
                     <vendor>Makita</vendor>
